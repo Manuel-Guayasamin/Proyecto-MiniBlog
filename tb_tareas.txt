@@ -1,0 +1,23 @@
+USE dawa;
+
+CREATE TABLE tb_tareas (
+    ID_tarea INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_tarea VARCHAR(255) NOT NULL,
+    Descripcion_tarea TEXT,
+    Fecha_inicio DATE,
+    Fecha_vencimiento DATE,
+    Estado_tarea VARCHAR(50),
+    Prioridad_tarea VARCHAR(50),
+    Responsable_tarea VARCHAR(255),
+    Creador_tarea VARCHAR(255),
+    Fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Ultima_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO tb_tareas (Nombre_tarea, Descripcion_tarea, Fecha_inicio, Fecha_vencimiento, Estado_tarea, Prioridad_tarea, Responsable_tarea, Creador_tarea)
+VALUES
+    ('Tarea 1', 'Descripción de la tarea 1', '2023-11-14', '2023-11-21', 'En progreso', 'Alta', 'Juan Perez', 'Ana Gomez'),
+    ('Tarea 2', 'Descripción de la tarea 2', '2023-11-15', '2023-11-28', 'Pendiente', 'Media', 'María Rodriguez', 'Carlos Lopez'),
+    ('Tarea 3', 'Descripción de la tarea 3', '2023-11-16', '2023-11-25', 'Completada', 'Baja', 'Pedro Fernandez', 'Elena Ruiz');
+
+select * from tb_tareas;

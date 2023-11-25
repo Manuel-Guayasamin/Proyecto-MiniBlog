@@ -1,0 +1,24 @@
+USE dawa;
+
+CREATE TABLE tb_Proyectos (
+    ID_proyecto INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_proyecto VARCHAR(255) NOT NULL,
+    Descripcion_proyecto TEXT,
+    Fecha_inicio DATE,
+    Fecha_finalizacion DATE,
+    Estado_proyecto VARCHAR(50),
+    Gerente_proyecto VARCHAR(255),
+    Equipo_proyecto TEXT,
+    Creador_proyecto VARCHAR(255),
+    Fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Ultima_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    Presupuesto_proyecto DECIMAL(10,2)
+);
+
+INSERT INTO tb_Proyectos (Nombre_proyecto, Descripcion_proyecto, Fecha_inicio, Fecha_finalizacion, Estado_proyecto, Gerente_proyecto, Equipo_proyecto, Creador_proyecto, Presupuesto_proyecto)
+VALUES
+    ('Proyecto 1', 'Descripción del proyecto 1', '2023-11-14', '2023-12-31', 'En progreso', 'Juan Perez', 'Equipo1, Equipo2', 'Ana Gomez', 50000.00),
+    ('Proyecto 2', 'Descripción del proyecto 2', '2023-11-15', '2024-01-15', 'Pendiente', 'María Rodriguez', 'Equipo3, Equipo4', 'Carlos Lopez', 75000.00),
+    ('Proyecto 3', 'Descripción del proyecto 3', '2023-11-16', '2023-12-20', 'Completado', 'Pedro Fernandez', 'Equipo5, Equipo6', 'Elena Ruiz', 100000.00);
+
+select * from tb_Proyectos;

@@ -1,0 +1,30 @@
+/* Estilos para el formulario */
+.formulario {
+  background-color: #fff;
+  padding: 0%;
+  width: max-content;
+}
+
+/* Estilos para el título */
+.titulor {
+  text-align: center;
+  color: #141414;
+}
+
+/* Estilos para los botones */
+
+button {
+  background-color: #080808;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+/**/
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}

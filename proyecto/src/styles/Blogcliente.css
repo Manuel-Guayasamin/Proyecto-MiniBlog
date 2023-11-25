@@ -1,0 +1,27 @@
+.formulario {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.titulor {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.modal {
+  max-width: 600px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
